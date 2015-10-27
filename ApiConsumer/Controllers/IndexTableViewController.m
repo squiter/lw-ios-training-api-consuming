@@ -21,6 +21,11 @@
     
     
     // self.posts = @[@{@"title": @"Titulo Bacanudo", @"content": @"Conteudo fodão que ta aqui no role"}];
+    
+    // Auto height
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
+    
     [self loadPosts];
     
     // Uncomment the following line to preserve selection between presentations.
