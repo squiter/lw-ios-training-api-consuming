@@ -20,7 +20,8 @@
     [super viewDidLoad];
     
     
-    self.posts = @[@{@"title": @"Titulo Bacanudo", @"content": @"Conteudo fodão que ta aqui no role"}];
+    // self.posts = @[@{@"title": @"Titulo Bacanudo", @"content": @"Conteudo fodão que ta aqui no role"}];
+    [self loadPosts];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,6 +33,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadPosts {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://jsonplaceholder.typicode.com/posts" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //NSLog(@"JSON: %@", responseObject);
+        NSError *error = nil;
+        self.posts = [MTLJSONAdapter modelsOfClass:Post.class fromJSONArray:responseObject error:&error];
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+    
 }
 
 #pragma mark - Table view data source
@@ -49,9 +64,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostsTableViewCell *postCell = [tableView dequeueReusableCellWithIdentifier:@"postCell" forIndexPath:indexPath];
     
+    Post *post = self.posts[indexPath.row];
+    
     // Configure the cell...
-    postCell.postTitle.text = [self.posts[indexPath.row] objectForKey:@"title"];
-    postCell.postContent.text = [self.posts[indexPath.row] objectForKey:@"content"];
+    postCell.postTitle.text = post.title;
+    postCell.postContent.text = post.content;
     
     return postCell;
 }

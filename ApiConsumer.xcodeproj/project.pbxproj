@@ -17,6 +17,7 @@
 		815C4A0D1BE003D800CBCF8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A061BE003D800CBCF8E /* main.m */; };
 		815C4A101BE007CA00CBCF8E /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A0F1BE007CA00CBCF8E /* IndexTableViewController.m */; };
 		815C4A151BE0095E00CBCF8E /* PostsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A141BE0095E00CBCF8E /* PostsTableViewCell.m */; };
+		815C4A181BE00F7A00CBCF8E /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A171BE00F7A00CBCF8E /* Post.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		815C4A0F1BE007CA00CBCF8E /* IndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewController.m; sourceTree = "<group>"; };
 		815C4A131BE0095E00CBCF8E /* PostsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsTableViewCell.h; sourceTree = "<group>"; };
 		815C4A141BE0095E00CBCF8E /* PostsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsTableViewCell.m; sourceTree = "<group>"; };
+		815C4A161BE00F7A00CBCF8E /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		815C4A171BE00F7A00CBCF8E /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		A6E2E3E04E557CB0CA27F6A9 /* Pods-ApiConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiConsumer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiConsumer/Pods-ApiConsumer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +190,8 @@
 		815C4A111BE0093700CBCF8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				815C4A161BE00F7A00CBCF8E /* Post.h */,
+				815C4A171BE00F7A00CBCF8E /* Post.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815C4A181BE00F7A00CBCF8E /* Post.m in Sources */,
 				815C4A101BE007CA00CBCF8E /* IndexTableViewController.m in Sources */,
 				815C4A071BE003D800CBCF8E /* AppDelegate.m in Sources */,
 				815C4A0D1BE003D800CBCF8E /* main.m in Sources */,

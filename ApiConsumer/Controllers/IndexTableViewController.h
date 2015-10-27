@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "PostsTableViewCell.h"
+#import "Post.h"
+
+// Pods
+#import <AFNetworking/AFNetworking.h>
 
 @interface IndexTableViewController : UITableViewController
 
