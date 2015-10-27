@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  IndexTableViewController.h
 //  ApiConsumer
 //
 //  Created by Treinamento Mobile on 10/27/15.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostsTableViewCell.h"
 
-@interface ViewController : UIViewController
-
+@interface IndexTableViewController : UITableViewController
 
 @end
-
