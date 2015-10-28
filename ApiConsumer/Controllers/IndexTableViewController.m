@@ -26,6 +26,8 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.0;
     
+    self.title = @"Posts";
+    
     [self loadPosts];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -50,8 +52,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-
-    
 }
 
 #pragma mark - Table view data source
@@ -74,6 +74,7 @@
     // Configure the cell...
     postCell.postTitle.text = post.title;
     postCell.postContent.text = post.content;
+    postCell.postCode = post.code;
     
     return postCell;
 }
@@ -121,5 +122,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToDetail"]) {
+        PostViewController *detailVC = segue.destinationViewController;
+        Post *post = self.posts[self.tableView.indexPathForSelectedRow.row];
+        detailVC.post = post;
+    }
+}
 
 @end

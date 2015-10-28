@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PostsTableViewCell.h"
 #import "Post.h"
+#import "PostViewController.h"
 
 // Pods
 #import <AFNetworking/AFNetworking.h>

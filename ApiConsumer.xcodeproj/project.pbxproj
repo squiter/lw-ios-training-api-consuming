@@ -18,6 +18,9 @@
 		815C4A101BE007CA00CBCF8E /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A0F1BE007CA00CBCF8E /* IndexTableViewController.m */; };
 		815C4A151BE0095E00CBCF8E /* PostsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A141BE0095E00CBCF8E /* PostsTableViewCell.m */; };
 		815C4A181BE00F7A00CBCF8E /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A171BE00F7A00CBCF8E /* Post.m */; };
+		815C4A1B1BE0E98200CBCF8E /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A1A1BE0E98200CBCF8E /* PostViewController.m */; };
+		815C4A1E1BE0EE5300CBCF8E /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A1D1BE0EE5300CBCF8E /* Comment.m */; };
+		815C4A211BE0F17F00CBCF8E /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A201BE0F17F00CBCF8E /* CommentTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		815C4A141BE0095E00CBCF8E /* PostsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsTableViewCell.m; sourceTree = "<group>"; };
 		815C4A161BE00F7A00CBCF8E /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		815C4A171BE00F7A00CBCF8E /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		815C4A191BE0E98200CBCF8E /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		815C4A1A1BE0E98200CBCF8E /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		815C4A1C1BE0EE5300CBCF8E /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		815C4A1D1BE0EE5300CBCF8E /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		815C4A1F1BE0F17F00CBCF8E /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		815C4A201BE0F17F00CBCF8E /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		A6E2E3E04E557CB0CA27F6A9 /* Pods-ApiConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiConsumer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiConsumer/Pods-ApiConsumer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +173,8 @@
 			children = (
 				815C4A0E1BE007CA00CBCF8E /* IndexTableViewController.h */,
 				815C4A0F1BE007CA00CBCF8E /* IndexTableViewController.m */,
+				815C4A191BE0E98200CBCF8E /* PostViewController.h */,
+				815C4A1A1BE0E98200CBCF8E /* PostViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				815C4A161BE00F7A00CBCF8E /* Post.h */,
+				815C4A1C1BE0EE5300CBCF8E /* Comment.h */,
+				815C4A1D1BE0EE5300CBCF8E /* Comment.m */,
 				815C4A171BE00F7A00CBCF8E /* Post.m */,
 			);
 			path = Models;
@@ -201,6 +214,8 @@
 			children = (
 				815C4A131BE0095E00CBCF8E /* PostsTableViewCell.h */,
 				815C4A141BE0095E00CBCF8E /* PostsTableViewCell.m */,
+				815C4A1F1BE0F17F00CBCF8E /* CommentTableViewCell.h */,
+				815C4A201BE0F17F00CBCF8E /* CommentTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,11 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815C4A1E1BE0EE5300CBCF8E /* Comment.m in Sources */,
 				815C4A181BE00F7A00CBCF8E /* Post.m in Sources */,
 				815C4A101BE007CA00CBCF8E /* IndexTableViewController.m in Sources */,
+				815C4A1B1BE0E98200CBCF8E /* PostViewController.m in Sources */,
 				815C4A071BE003D800CBCF8E /* AppDelegate.m in Sources */,
 				815C4A0D1BE003D800CBCF8E /* main.m in Sources */,
 				815C4A151BE0095E00CBCF8E /* PostsTableViewCell.m in Sources */,
+				815C4A211BE0F17F00CBCF8E /* CommentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

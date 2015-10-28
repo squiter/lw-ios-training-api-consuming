@@ -11,4 +11,5 @@
 @interface PostsTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *postTitle;
 @property (nonatomic, weak) IBOutlet UILabel *postContent;
+@property (nonatomic, strong) NSNumber *postCode;
 @end
