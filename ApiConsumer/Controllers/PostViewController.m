@@ -72,7 +72,7 @@
     
     // Configure the cell...
     commentCell.name.text = [self truncateString:comment.name withQuantity:42];
-    commentCell.email.text = comment.email;
+    commentCell.email.text = [comment.email lowercaseString];
     commentCell.body.text = comment.body;
     commentCell.code = comment.code;
     
