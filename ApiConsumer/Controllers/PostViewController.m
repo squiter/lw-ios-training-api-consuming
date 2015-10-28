@@ -50,7 +50,7 @@
 - (void)loadComments {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[NSString stringWithFormat: @"http://jsonplaceholder.typicode.com/posts/%@/comments", self.post.code] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
         NSError *error = nil;
         self.pComments = [MTLJSONAdapter modelsOfClass:Comment.class fromJSONArray:responseObject error:&error];
         [self.tableView reloadData];
@@ -68,10 +68,10 @@
     
     Comment *comment = self.pComments[indexPath.row];
     
-    NSLog(@"%@ - %@ - %@",comment.name, comment.email, comment.body);
+    //NSLog(@"%@ - %@ - %@",comment.name, comment.email, comment.body);
     
     // Configure the cell...
-    commentCell.name.text = [self formatName:comment.name];
+    commentCell.name.text = [self truncateString:comment.name withQuantity:42];
     commentCell.email.text = comment.email;
     commentCell.body.text = comment.body;
     commentCell.code = comment.code;
@@ -79,12 +79,12 @@
     return commentCell;
 }
 
-- (NSString *)formatName:(NSString *)name {
-    if (name.length <= 42) {
-        return name;
+- (NSString *)truncateString:(NSString *)string withQuantity:(NSInteger)qnt {
+    if (string.length <= qnt) {
+        return string;
     } else {
-        NSString * newName = [name substringToIndex: MIN(42, [name length])];
-        return [newName stringByAppendingString:@"..."];
+        NSString * nString = [string substringToIndex: MIN(qnt, [string length])];
+        return [nString stringByAppendingString:@"..."];
     }
 }
 
